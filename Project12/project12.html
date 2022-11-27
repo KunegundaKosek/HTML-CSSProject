@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+        }
+
+        .white {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            animation: move 10s infinite linear;
+            /* animation-name: move - nazwa animacji;
+            animation-duration: 5s - czas trwania animacji;
+            animation-iteration-count: infinite - ile razy ma się wykonać //infinite - nieskończona;
+            animation-timing-function: linear - ;
+            animation-delay: 20s; - opóźnienie uruchomienia aplikacji
+            animation-direction: normal; - kierunek wykonywania (domyślnie od 0% do 100%)
+            */
+        }
+
+        @keyframes move {
+            30% {
+                margin-left: calc(100% - 200px);
+                background-color: pink;
+            }
+
+            50% {
+                margin-left: calc(100% - 200px);
+                background-color: purple;
+            }
+
+            80% {
+                margin-left: 0;
+                background-color: blue;
+            }
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="white"></div>
+
+</body>
+
+</html>
