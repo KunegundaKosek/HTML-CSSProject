@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            position: absolute;
+            bottom: 15vh;
+            right: 15vw;
+            border: 2px solid black;
+            width: 360px;
+            height: 100px;
+            background-color: #fff;
+            font-size: 40px;
+            text-transform: uppercase;
+            font-family: arial;
+            animation: shakes 5s linear infinite;
+            overflow: hidden;
+        }
+
+        button span {
+            display: block;
+            line-height: 100px;
+            position: relative;
+            top: 0;
+            transition: 0.3s;
+        }
+
+        button:hover span {
+            top: -100px;
+        }
+
+        @keyframes shakes {
+            0% {
+                transform: translateX(0);
+            }
+
+            90% {
+                transform: translateX(0);
+            }
+
+            91% {
+                transform: translateX(20px);
+            }
+
+            92% {
+                transform: translateX(-21px);
+            }
+
+            93% {
+                transform: translateX(20px);
+            }
+
+            94% {
+                transform: translateX(-20px);
+            }
+
+            95% {
+                transform: translateX(20px);
+            }
+
+            96% {
+                transform: translateX(-20px);
+            }
+
+            97% {
+                transform: translateX(20px);
+            }
+
+            98% {
+                transform: translateX(-20px);
+            }
+
+            99% {
+                transform: translateX(20px);
+            }
+
+        }
+
+        section {
+            position: absolute;
+            width: 80%;
+            height: 30vh;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: pink;
+            overflow: hidden;
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+            font-size: 60px;
+            text-transform: uppercase;
+            font-family: arial, sans-serif;
+            animation: text 15s linear infinite both;
+            color: black;
+        }
+
+        h1:nth-child(2) {
+            animation-delay: 5s;
+        }
+
+        h1:nth-child(3) {
+            animation-delay: 10s;
+        }
+
+        @keyframes text {
+            0% {
+                transform: translate(100%, -50%);
+            }
+
+            3% {
+                transform: translate(100%, -50%);
+            }
+
+            6% {
+                transform: translate(0, -50%);
+            }
+
+            30% {
+                transform: translate(0, -50%);
+            }
+
+            33% {
+                transform: translate(-100%, -50%);
+            }
+            100% {
+                transform: translate(-100%, -50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <h1>Tanio</h1>
+        <h1>Szybko</h1>
+        <h1>Średnio</h1>
+    </section>
+
+    <button>
+        <span>Kup teraz</span><span>Super okazja!</span>
+    </button>
+</body>
+
+</html>
