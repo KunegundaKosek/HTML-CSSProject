@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,32 +8,178 @@
     <script src="https://kit.fontawesome.com/a42805eadb.js" crossorigin="anonymous"></script>
     <title>Menu</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+        height: 300vh;
+        }
+
+        .wrap {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .wrap, nav.desktop,
+        header {
+            height: 360px;
+        }
+
+        nav.desktop {
+            float: left;
+            width: 300px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav.desktop a {
+            display: block;
+            line-height: 72px;
+            font-size: 22px;
+            color: black;
+            text-decoration: none;
+            font-family: arial;
+            padding: 0 5px 0 30px;
+        }
+
+        nav.desktop i {
+            width: 50px;
+            border-right: 2px solid black;
+            margin-right: 30px;
+            transition: 0.3s;
+        }
+
+        nav.desktop a:hover i {
+            margin-right: 50px;
+        }
+
+        nav.desktop a:hover {
+            color: blue;
+        }
+
+        header {
+            float: left;
+            width: calc(100% - 300px);
+            background-color: brown;
+            background-image: url(bamboo.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        section {
+            margin-top: 50px;
+
+        }
+
+        section h1 {
+            font-size: 40px;
+            font-family: arial;
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav.mobile {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            nav.desktop {
+                display: none;
+            }
+
+            nav.mobile {
+                position: fixed;
+                display: block;
+                width: 72px;
+                height: 100%;
+                background-color: black;
+                color: white;
+            }
+
+            nav.mobile a {
+                display: block;
+                line-height: 10vh;
+                color: white;
+                font-size: 30px;
+                text-align: center;
+            }
+
+            header {
+                width: 100%;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-<div class="wrap">
-    <nav>
-        <ul>
-            <li>
-                <a href="#">Start</a>
-            </li>
-            <li>
-                <a href="#">Oferta</a>
-            </li>
-            <li>
-                <a href="#">Blog</a>
-            </li>
-            <li>
-                <a href="#">Terminarz</a>
-            </li>
-            <li>
-                <a href="#">Kontakt</a>
-            </li>
-        </ul>
-    </nav>
-</div>
+    <div class="wrap">
+        <nav class="desktop">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-circle-play"></i>Start</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>Oferta</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-rss"></i>Blog</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-calendar"></i>Terminarz</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-envelope"></i>Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-circle-play"></i></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-rss"></i></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-calendar"></i></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-envelope"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header>
+
+        </header>
+    </div>
+
+    <section>
+        <h1>Witaj w naszym sklepie</h1>
+    </section>
 
 </body>
+
 </html>
